@@ -80,7 +80,7 @@ window_frame = {
   -- inactive_titlebar_bg = "#1e1e1e", -- тёмный фон неактивной
 },
 
-  use_fancy_tab_bar = false,
+  use_fancy_tab_bar = true,
 
   color_scheme = "Default (dark) (terminal.sexy)",
   -- color_scheme = "Monokai Vivid",
@@ -167,7 +167,6 @@ window_frame = {
   -- Tabs
   enable_tab_bar = true,
   hide_tab_bar_if_only_one_tab = true,
-  tab_max_width = 32,
 
   -- Shell (автоматически возьмёт zsh/oh-my-zsh)
   default_prog = { "/bin/zsh", "-l" },

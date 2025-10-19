@@ -49,10 +49,18 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_wid
     title = title .. " 🕹"  -- add indicator for active tab
   end
   
+  -- Pad title to minimum width
+  local min_width = 20
+  local padded_title = title
+  if #title < min_width then
+    local padding = math.floor((min_width - #title) / 2)
+    padded_title = string.rep(" ", padding) .. title .. string.rep(" ", padding)
+  end
+  
   return {
     { Background = { Color = bg } },
     { Foreground = { Color = fg } },
-    { Text = " " .. title .. " " },
+    { Text = " " .. padded_title .. " " },
   }
 end)
 
